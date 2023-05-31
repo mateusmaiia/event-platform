@@ -1,4 +1,6 @@
 import { CheckCircle, Lock } from 'phosphor-react'
+import { format, isPast } from 'date-fns' //isPast ==> Verifica se uma data que passar como parametro ja passou/passado
+import ptBR from 'date-fns/locale/pt-BR'
 
 interface LessonProps {
     title: string;
@@ -8,12 +10,14 @@ interface LessonProps {
 }
 
 export function Lesson(props: LessonProps) {
-    const isLessonAvailable = false;
-
+    const isLessonAvailable = isPast(props.availableAt)
+    const availableDateFormatted = format(props.availableAt, "EEEE' • 'dd' de 'MMMM' • 'H'h'mm",{
+        locale: ptBR,
+    } )
     return (
         <a href="#">
             <span className="text-gray-300">
-                {props.availableAt.toString()}
+                {availableDateFormatted}
             </span>
 
             <div className="rounded border border-gray-500 p-4 mt-2">
