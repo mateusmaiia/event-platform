@@ -1,5 +1,6 @@
-import { Player, Youtube } from "@vime/react";
+import { Player, Youtube, DefaultUi } from "@vime/react";
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
+import '@vime/core/themes/default.css'
 
 export function Video() {
     return (
@@ -7,7 +8,8 @@ export function Video() {
             <div className="bg-black flex justify-center">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <Player>
-                        <Youtube videoId/>
+                        <Youtube videoId="h_B3aDvdKbw"/>
+                        <DefaultUi/>   //coloca os controles de video padrão da biblioteca, aumentar volume, pause
                     </Player>
                 </div>
             </div>
