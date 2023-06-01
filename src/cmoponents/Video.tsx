@@ -1,10 +1,15 @@
+import { Player, Youtube } from "@vime/react";
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
 
 export function Video() {
     return (
         <div className="flex-1">
             <div className="bg-black flex justify-center">
-                <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video"></div>
+                <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+                    <Player>
+                        <Youtube videoId/>
+                    </Player>
+                </div>
             </div>
 
             <div className="p-8 mx-auto max-w-[1100px]">
