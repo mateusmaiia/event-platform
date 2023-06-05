@@ -6,7 +6,7 @@ export function Router(){
         <Routes>
             <Route path="/" element={<h1>Hola</h1>}/>
             <Route path="/event" element={<Event />}/>
-            <Route path="/event/hala" element={<h1>Halamalescp</h1>}/>
+            <Route path="/event/lesson/:slug" element={<Event />}/>
         </Routes>
     );
 }
