@@ -3,7 +3,7 @@ import { Logo } from "../cmoponents/Logo";
 export function Subscribe(){
     return(
         <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-            <div className="max-w-[1100] flex items-center justify-between mt-20 mx-auto">
+            <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
                 <div className="max-w-[640px] ">
                     <Logo />
                     <h1 className="mt-8 text-[2.5rem] leading-tight">
@@ -20,11 +20,22 @@ export function Subscribe(){
 
                         <form action="" className="flex flex-col w-full gap-2">
                             <input
+                                className="bg-gray-900 rounded h-14 px-5"
                                 type="text"
-                                placeholder="Seu nome completo"/>
+                                placeholder="Seu nome completo"
+                            />
                             <input 
+                                className="bg-gray-900 rounded h-14 px-5"
                                 type="email " 
-                                placeholder="Digite seu e-mail"/>
+                                placeholder="Digite seu e-mail"
+                            />
+
+                            <button 
+                                type="submit"
+                                className="w-[20.375rem] uppercase h-[3.375rem] bg-green-500  text-white mt-4 hover:bg-green-700 transition-colors"
+                            >
+                                    Garantir minha vaga                                           
+                            </button>
                         </form>
                     </div>
                 </div>
